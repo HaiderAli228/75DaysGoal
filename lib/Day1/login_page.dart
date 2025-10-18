@@ -8,6 +8,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+debugPrint(MediaQuery.of(context).size.height.toString());
+debugPrint(MediaQuery.of(context).size.width.toString());
+
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
