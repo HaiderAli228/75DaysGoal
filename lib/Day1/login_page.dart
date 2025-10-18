@@ -14,6 +14,10 @@ debugPrint(MediaQuery.of(context).size.width.toString());
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -82,7 +86,7 @@ debugPrint(MediaQuery.of(context).size.width.toString());
                     margin: EdgeInsets.only(top: 20),
                     width: double.infinity,
                     alignment: Alignment.center,
-                    height: 50,
+                    height: height * 0.07,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       gradient: LinearGradient(
