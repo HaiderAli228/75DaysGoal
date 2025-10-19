@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'Day2/profile.dart';
+import 'days3/responsiv_design.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Profile(),
+      home: ResponsiveCard(),
     );
   }
 }
