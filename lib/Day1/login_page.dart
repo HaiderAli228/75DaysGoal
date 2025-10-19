@@ -8,15 +8,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-debugPrint(MediaQuery.of(context).size.height.toString());
-debugPrint(MediaQuery.of(context).size.width.toString());
-
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+
+    debugPrint(height.toString());
+    debugPrint(width.toString());
 
     return Scaffold(
       body: Container(
