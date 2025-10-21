@@ -18,7 +18,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       darkTheme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.black,
@@ -26,7 +25,6 @@ class _MyAppState extends State<MyApp> {
           titleSpacing: 3,
         ),
         brightness: Brightness.dark,
-        colorScheme: ColorScheme.dark(primary: Colors.black),
         textTheme: TextTheme(
           bodyLarge: TextStyle(
             color: Colors.white,
