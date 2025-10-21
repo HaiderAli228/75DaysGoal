@@ -18,16 +18,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
-        colorScheme: ColorScheme(
-          brightness: Brightness.dark,
+        colorScheme: ColorScheme.dark(
           primary: Colors.white,
           onPrimary: Colors.black,
           secondary: Colors.white,
           onSecondary: Colors.black,
           error: Colors.red,
           onError: Colors.white,
-          surface: Colors.white,
-          onSurface: Colors.black,
         ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.black,
@@ -45,6 +42,17 @@ class _MyAppState extends State<MyApp> {
       ),
       theme: ThemeData(
         brightness: Brightness.light,
+        colorScheme: ColorScheme(
+          brightness: Brightness.light,
+          primary: Colors.purple,
+          onPrimary: Colors.white,
+          secondary: Colors.purple,
+          onSecondary: Colors.white,
+          error: Colors.red,
+          onError: Colors.white,
+          surface: Colors.white,
+          onSurface: Colors.black,
+        ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.red,
           centerTitle: false,
@@ -53,11 +61,7 @@ class _MyAppState extends State<MyApp> {
           titleTextStyle: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
         ),
         textTheme: TextTheme(
-          bodyLarge: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
+          bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 100),
         ),
       ),
       themeMode: toggle ? ThemeMode.dark : ThemeMode.light,
@@ -82,7 +86,9 @@ class _MyAppState extends State<MyApp> {
               margin: EdgeInsets.all(20),
               child: Text(
                 toggle ? "Switch to Light" : "Switch to Dark",
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             ),
           ),
@@ -91,37 +97,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-// class Day4Theme extends StatefulWidget {
-//   const Day4Theme({super.key});
-//
-//   @override
-//   State<Day4Theme> createState() => _Day4ThemeState();
-// }
-//
-// class _Day4ThemeState extends State<Day4Theme> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text("This is Title")),
-//       body: InkWell(
-//         onTap: () {
-//           setState(() {
-//             toggle == true ? toggle = false : toggle = true;
-//           });
-//         },
-//         child: Container(
-//           height: 100,
-//           width: double.infinity,
-//           padding: EdgeInsets.all(10),
-//           margin: EdgeInsets.all(20),
-//           color: Theme.of(context).colorScheme.primary,
-//           child: Text(
-//             "Toggle to Dark",
-//             style: Theme.of(context).textTheme.bodyLarge,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
