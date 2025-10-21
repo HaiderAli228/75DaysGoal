@@ -13,12 +13,22 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool toggle = false;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
+        colorScheme: ColorScheme(
+          brightness: Brightness.dark,
+          primary: Colors.white,
+          onPrimary: Colors.black,
+          secondary: Colors.white,
+          onSecondary: Colors.black,
+          error: Colors.red,
+          onError: Colors.white,
+          surface: Colors.white,
+          onSurface: Colors.black,
+        ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.black,
           centerTitle: true,
