@@ -17,13 +17,18 @@ class _Day5PkgState extends State<Day5Pkg> {
         centerTitle: true,
         title: Text(
           "flutter_screenutil pkg",
-          style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 15.sp,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
         ),
       ),
       body: Center(
         child: Container(
           height: 150.h,
           width: 150.w,
+          alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadiusGeometry.all(Radius.circular(10.r)),
             color: Theme.of(context).colorScheme.primary,

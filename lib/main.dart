@@ -1,4 +1,5 @@
 import 'package:_75daysgoal/Day5_pkg.dart';
+import 'package:_75daysgoal/days3/platform_detection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,14 +15,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool toggle = false;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: true,
       minTextAdapt: true,
-      builder: (context, child) =>
-          MaterialApp(debugShowCheckedModeBanner: false, home: Day5Pkg()),
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: PlatformDetectionClass(),
+
+      ),
     );
   }
 }
