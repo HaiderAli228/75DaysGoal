@@ -1,7 +1,8 @@
 import 'package:_75daysgoal/Day5_pkg.dart';
-import 'package:_75daysgoal/days3/platform_detection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'Day3/platform_detection.dart';
 
 void main() {
   runApp(MyApp());
