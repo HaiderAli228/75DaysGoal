@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class PlatformDetectionClass extends StatefulWidget {
   const PlatformDetectionClass({super.key});
+
   @override
   State<PlatformDetectionClass> createState() => _PlatformDetectionClassState();
 }
