@@ -1,5 +1,3 @@
-import 'package:_75daysgoal/route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +20,11 @@ class _MyAppState extends State<MyApp> {
     return ScreenUtilInit(
       splitScreenMode: true,
       minTextAdapt: true,
-      builder: (context, child) => CupertinoApp(home: HomePage()),
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: PlatformDetectionClass(),
+
+      ),
     );
   }
 }
